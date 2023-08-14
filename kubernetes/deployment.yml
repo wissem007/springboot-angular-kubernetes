@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: springboot-k8s-mysql
-          image: springboot-k8s-deployment:1.0
+          image: wissem007/spring_app:v2
           ports:
             - containerPort: 8080                
           env:   # Setting Enviornmental Variables
@@ -54,5 +54,4 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: db-credentials
-                key: password     
-        
+                key: password
